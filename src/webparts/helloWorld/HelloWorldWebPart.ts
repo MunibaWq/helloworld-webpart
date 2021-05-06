@@ -31,9 +31,8 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
               <p class="${
                 styles.subTitle
               }">Customize SharePoint experiences using Web Parts.</p>
-              <p class="${styles.description}">${escape(
-      this.properties.description
-    )}</p>
+              <p class="${styles.description}">${escape(this.properties.description)}</p>
+              <p class="${styles.description}"> ${escape(this.properties.test)}</p>
               <a href="https://aka.ms/spfx" class="${styles.button}">
                 <span class="${styles.label}">Learn more</span>
               </a>
@@ -61,27 +60,27 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
                 PropertyPaneTextField("description", {
                   label: strings.DescriptionFieldLabel,
                 }),
-                PropertyPaneTextField('test', {
-                  label: 'Mutli-line Text Field',
-                  multiline: true
+                PropertyPaneTextField("test", {
+                  label: "Mutli-line Text Field",
+                  multiline: true,
                 }),
-                PropertyPaneCheckbox('test1', {
-                  text: 'Checkbox'
+                PropertyPaneCheckbox("test1", {
+                  text: "Checkbox",
                 }),
-                PropertyPaneDropdown('test2', {
-                  label: 'Dropdown',
+                PropertyPaneDropdown("test2", {
+                  label: "Dropdown",
                   options: [
-                    { key: '1', text: 'One'},
-                    { key: '2', text: 'Two'},
-                    { key: '3', text: 'Three'},
-                    { key: '4', text: 'Four'}
-                  ]
+                    { key: "1", text: "One" },
+                    { key: "2", text: "Two" },
+                    { key: "3", text: "Three" },
+                    { key: "4", text: "Four" },
+                  ],
                 }),
-                PropertyPaneToggle('test3', {
-                  label: 'Toggle',
-                  onText: 'On',
-                  offText: 'Off'
-                })
+                PropertyPaneToggle("test3", {
+                  label: "Toggle",
+                  onText: "On",
+                  offText: "Off",
+                }),
               ],
             },
           ],
