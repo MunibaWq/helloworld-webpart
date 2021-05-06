@@ -61,6 +61,27 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
                 PropertyPaneTextField("description", {
                   label: strings.DescriptionFieldLabel,
                 }),
+                PropertyPaneTextField('test', {
+                  label: 'Mutli-line Text Field',
+                  multiline: true
+                }),
+                PropertyPaneCheckbox('test1', {
+                  text: 'Checkbox'
+                }),
+                PropertyPaneDropdown('test2', {
+                  label: 'Dropdown',
+                  options: [
+                    { key: '1', text: 'One'},
+                    { key: '2', text: 'Two'},
+                    { key: '3', text: 'Three'},
+                    { key: '4', text: 'Four'}
+                  ]
+                }),
+                PropertyPaneToggle('test3', {
+                  label: 'Toggle',
+                  onText: 'On',
+                  offText: 'Off'
+                })
               ],
             },
           ],
