@@ -88,4 +88,9 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
       ],
     };
   }
+
+  // turn on the non-reactive mode
+  protected get disableReactivePropertyChanges(): boolean {
+    return true;
+  }
 }
